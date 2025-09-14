@@ -6,6 +6,9 @@
 package com.trainerservice.trainerservice.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,6 +23,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Trainer {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private Integer age;
@@ -28,5 +33,4 @@ public class Trainer {
     private String specialization;   
     private int yearsOfExperience;   
     private String bio;
-    private LocalDate dateOfBirth;
 }

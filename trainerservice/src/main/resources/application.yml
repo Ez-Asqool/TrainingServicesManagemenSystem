@@ -1,21 +1,21 @@
 server:
-    port:9001
+    port: 9001
     
 spring:
     application:
         name:trainer
         
-    datasourse:
+    datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        uri: jdbc:mysql://localhost:3306/trinersdb?serverTimezone=UTC
+        url: jdbc:mysql://localhost:3306/trainersdb?serverTimezone=UTC
         username: root
         password: 
         
     sql:
-        innit:
+        init:
             mode:always
             
-    jps:
+    jpa:
         hibernate:
             ddl-auto: update
         show-sql: true

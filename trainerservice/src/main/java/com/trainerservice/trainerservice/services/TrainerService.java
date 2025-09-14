@@ -24,5 +24,13 @@ public class TrainerService {
         return this.trainerRepository.findAll();
     }
     
+    public Trainer getTrainerById(Long id){
+        return this.trainerRepository.findById(id).get();
+    }
+    
+    public Trainer addTrainer(Trainer trainer){
+        return this.trainerRepository.save(trainer);
+    }
+    
     
 }
